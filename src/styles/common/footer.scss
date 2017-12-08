@@ -1,0 +1,32 @@
+.footer{
+    height: 148px;
+    background: rgba($color: #373e42, $alpha: 0.85);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 16px;
+    &__row{
+        width: 95%;
+        height: 50%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__menu{
+        display: flex;
+        &-item{
+            margin: 0 10px;
+        }
+    }
+    &__social{
+        
+    }
+    &__about{
+        width: 40%;
+    }
+    &__copyright{
+        
+    }
+}

@@ -1,0 +1,22 @@
+body{
+    margin: 0;
+    font-family: "RobotoRegular",Arial, Helvetica, sans-serif;
+}
+ul{
+    margin: 0;
+    padding: 0;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: #fff;
+}
+@import 'common/fonts';
+@import 'common/menu';
+@import 'common/technologies';
+@import 'common/slider';
+@import 'common/header';
+@import 'common/footer';
+@import 'pages/about';

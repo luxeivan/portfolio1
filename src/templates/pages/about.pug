@@ -1,0 +1,40 @@
+extends ../template
+
+block variables
+    - var title = 'Обо мне'
+
+block content
+    .about
+        .about__left
+            .about__left-ugol
+            .about__column
+                h1.about__about Обо мне
+            .about__column
+                img.about__img(src="./assets/images/about/me.jpg", alt="Это Я!")
+                h2.about__title Кто Я
+                .about__text Я веб разработчик из Москвы. Мне 32 года. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты. Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
+        .about__right
+            .about__right-ugol
+            h2.about__right-title Чем я могу быть вам полезен
+            .about__right-text Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
+            ul.tehnology
+                li.tehnology__item 
+                    h3.tehnology__title Frontend
+                    ul.teh
+                        li.teh__item html
+                        li.teh__item css3
+                        li.teh__item javascript & jQuery
+                li.tehnology__item
+                    h3.tehnology__title Backend
+                    ul.teh
+                        li.teh__item PHP
+                        li.teh__item mySQL
+                        li.teh__item Node.js & npm
+                        li.teh__item MongoDB
+                li.tehnology__item
+                    h3.tehnology__title WorkFlow
+                    ul.teh
+                        li.teh__item Git
+                        li.teh__item Gulp
+                        li.teh__item Bower
+    
