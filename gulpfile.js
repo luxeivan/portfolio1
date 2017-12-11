@@ -14,6 +14,11 @@ const gulpWebpack = require('gulp-webpack');
 const webpack = require('webpack');
 const webpackConfig = require('./webpack.config.js');
 
+const mySvgSprite = require('gulp-svg-sprites');
+const svgmin = require('gulp-svgmin');
+const cheerio = require('gulp-cheerio');
+const replace = require('gulp-replace');
+
 const paths = {
     root: './build',
     templates: {
@@ -35,6 +40,10 @@ const paths = {
     scripts: {
         src: 'src/scripts/**/*.js',
         dest: 'build/assets/scripts/'
+    },
+    svg: {
+        src: 'src/images/**/*.svg',
+        dest: 'build/assets/images/svg/'
     }
 }
 
@@ -91,9 +100,41 @@ function images() {
     return gulp.src(paths.images.src)
         .pipe(gulp.dest(paths.images.dest));
 }
+// просто переносим шрифты
 function fonts() {
     return gulp.src(paths.fonts.src)
         .pipe(gulp.dest(paths.fonts.dest));
+}
+//svg
+ function svgSprite() {
+	return gulp.src(paths.svg.src)
+		// minify svg
+		.pipe(svgmin({
+			js2svg: {
+				pretty: true
+			}
+		}))
+		// remove all fill and style declarations in out shapes
+		.pipe(cheerio({
+			run: function ($) {
+				$('[fill]').removeAttr('fill');
+				$('[style]').removeAttr('style');
+			},
+			parserOptions: { xmlMode: true }
+		}))
+		// cheerio plugin create unnecessary string '>', so replace it.
+		.pipe(replace('&gt;', '>'))
+		// build svg sprite
+		.pipe(mySvgSprite({
+				mode: "symbols",
+				preview: false,
+				selector: "icon-%f",
+				svg: {
+					symbols: 'symbol_sprite.svg'
+				}
+			}
+		))
+		.pipe(gulp.dest(paths.svg.dest));
 }
 
 exports.templates = templates;
@@ -101,9 +142,11 @@ exports.styles = styles;
 exports.clean = clean;
 exports.images = images;
 exports.fonts = fonts;
+exports.svgSprite = svgSprite;
+
 
 gulp.task('default', gulp.series(
     clean,
-    gulp.parallel(styles, templates, images, fonts, scripts),
+    gulp.parallel(styles, templates, svgSprite, images, fonts, scripts),
     gulp.parallel(server, watch)
 ));

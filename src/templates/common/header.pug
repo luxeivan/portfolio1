@@ -1,12 +1,18 @@
 header.header
     .header__top
         ul.social
-            li.social__item 
-                a.social__link(href="#") Фэйсбук
-            li.social__item 
-                a.social__link(href="#") Твиттер
-            li.social__item
-                a.social__link(href="#")  Инстаграм
+                li.social__item 
+                    a.social__link(href="#")
+                        svg(width="31px" height="18px").social__img
+                            use(xlink:href='./assets/images/svg/symbol_sprite.svg#icon-vk')
+                li.social__item 
+                    a.social__link(href="#")
+                        svg(width="31px" height="18px").social__img
+                            use(xlink:href='./assets/images/svg/symbol_sprite.svg#icon-github')
+                li.social__item 
+                    a.social__link(href="#")
+                        svg(width="31px" height="18px").social__img
+                            use(xlink:href='./assets/images/svg/symbol_sprite.svg#icon-in')
         .hamburger
     .header__middle
         .my
