@@ -9,7 +9,6 @@
     align-items: center;
     justify-content: center;
     position: relative;
-    z-index: -2;
     &__top {
         width: 95%;
         margin-top: 10px; 
@@ -41,7 +40,10 @@
         margin: 0 10px;
     }
     &__link{
-        
+        cursor: pointer;
+    }
+    &__img{
+        fill: #fff;
     }
 }
 .my {
