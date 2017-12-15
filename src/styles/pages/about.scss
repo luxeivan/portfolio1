@@ -19,10 +19,10 @@
     }
     &__column{
         flex: 1;
+
     }
     &__about{
-        font-family: "BERNIER",Arial, Helvetica, sans-serif;
-        text-align: center;
+        
     }
     &__img{
         width: 100%;
@@ -30,18 +30,22 @@
     &__title{
         font-family: "BERNIER",Arial, Helvetica, sans-serif;
         text-align: center;
+        font-size: 35px;
     }
     &__right{
         width: 50%;
         // background: url('../images/icons/about_bg_right.svg') center center no-repeat;        
         background: #eeebdf;
         position: relative;
+        &-content{
+            z-index: 50;
+        }
         &-ugol{
             position: absolute;
             width: 100%;
             fill: #eeebdf;
             left: 0;
-            top: -150px;     
+            top: -150px;    
         }
         &-title{
             font-family: "BERNIER",Arial, Helvetica, sans-serif;
@@ -52,7 +56,6 @@
         }
     }
 }
-
 .tehnology{
     &__item{
         margin-bottom: 20px;
@@ -66,4 +69,8 @@
     &__item{
         margin: 0 10px;
     }
+}
+.zagolovok--kto h2, .zagolovok--right h2{
+    font-size: 35px;
+    width: 220px;
 }

@@ -1,18 +1,17 @@
 footer.footer
     .footer__row
         ul.footer__menu
-            li.footer__menu-item Мои работы
-            li.footer__menu-item Обо мне
-            li.footer__menu-item Блог
-            li.footer__menu-item Авторизация
+            each val, index in {'Мои работы':'#', 'Обо мне':'#', 'Блог':'#', 'Авторизация':'#',}
+                li.footer__menu-item
+                    a(href= val)= index
         .footer__social
-            ul.social
-                li.social__item 
-                    a.social__link(href="#") Фэйсбук
-                li.social__item 
-                    a.social__link(href="#") Твиттер
-                li.social__item
-                    a.social__link(href="#")  Инстаграм
+            ul.social.social--footer
+                each item in ['vk','github','in']
+                    - item='./assets/images/svg/symbol_sprite.svg#icon-' + item
+                    li.social__item 
+                        a.social__link(href="#")
+                            svg(width="31px" height="18px").social__img
+                                use(xlink:href= item)
     .footer__row
         .footer__about Я веб-разработчик из Москвы, и этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. 
         .footer__copyright © Шишкин Иван | создано с любовью в LoftSchool | 2018

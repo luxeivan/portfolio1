@@ -6,6 +6,7 @@
     justify-content: center;
     align-items: center;
     color: #fff;
+    font-family: "RobotoLight",Arial, Helvetica, sans-serif;
     font-size: 16px;
     &__row{
         width: 95%;
@@ -16,6 +17,7 @@
     }
     &__menu{
         display: flex;
+        font-family: "RobotoMedium",Arial, Helvetica, sans-serif;
         &-item{
             margin: 0 10px;
         }
@@ -29,4 +31,8 @@
     &__copyright{
         
     }
+}
+.social--footer .social__item{
+    border: 1px solid #fff;
+    border-radius: 50%;
 }

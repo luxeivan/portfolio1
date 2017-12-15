@@ -37,7 +37,12 @@
 .social{
     display: flex;
     &__item{
+        width: 36px;
+        height: 36px;
         margin: 0 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     &__link{
         cursor: pointer;
@@ -46,7 +51,7 @@
         fill: #fff;
     }
 }
-.my {
+.i {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -95,4 +100,7 @@
         border-radius: 3px;
         background: #fff;
     }
+}
+.strelka__img{
+    fill: #fff;
 }

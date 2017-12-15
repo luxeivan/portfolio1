@@ -31,14 +31,17 @@
         <div class="hamburger"></div>
       </div>
       <div class="header__middle">
-        <div class="my">
-          <div class="my__img"><img src="./assets/images/i.jpg" alt="Это Я!"></div>
-          <div class="my__title">Шишкин Иван</div>
-          <div class="my__text">Личный сайт веб разработчика</div>
+        <div class="i">
+          <div class="i__img"><img src="./assets/images/i.jpg" alt="Это Я!"></div>
+          <div class="i__title">Шишкин Иван</div>
+          <div class="i__text">Личный сайт веб разработчика</div>
         </div>
       </div>
       <div class="header__arrow">
-        <div class="strelka"> <a href="#"><img src="./assets/images/icons/arrow_down.svg" alt="Вниз"></a></div>
+        <div class="strelka">            <a href="#">
+            <svg class="strelka__img" width="20" height="20">
+              <use xlink:href="./assets/images/svg/symbol_sprite.svg#icon-arrow_down"></use>
+            </svg></a></div>
       </div>
     </header>
     <h1>Мои работы</h1>
@@ -56,16 +59,25 @@
     <footer class="footer">
       <div class="footer__row">
         <ul class="footer__menu">
-          <li class="footer__menu-item">Мои работы</li>
-          <li class="footer__menu-item">Обо мне</li>
-          <li class="footer__menu-item">Блог</li>
-          <li class="footer__menu-item">Авторизация</li>
+          <li class="footer__menu-item"><a href="#">Мои работы</a></li>
+          <li class="footer__menu-item"><a href="#">Обо мне</a></li>
+          <li class="footer__menu-item"><a href="#">Блог</a></li>
+          <li class="footer__menu-item"><a href="#">Авторизация</a></li>
         </ul>
         <div class="footer__social">
-          <ul class="social">
-            <li class="social__item"> <a class="social__link" href="#">Фэйсбук</a></li>
-            <li class="social__item"> <a class="social__link" href="#">Твиттер</a></li>
-            <li class="social__item"><a class="social__link" href="#"> Инстаграм</a></li>
+          <ul class="social social--footer">
+            <li class="social__item"> <a class="social__link" href="#">
+                <svg class="social__img" width="31px" height="18px">
+                  <use xlink:href="./assets/images/svg/symbol_sprite.svg#icon-vk"></use>
+                </svg></a></li>
+            <li class="social__item"> <a class="social__link" href="#">
+                <svg class="social__img" width="31px" height="18px">
+                  <use xlink:href="./assets/images/svg/symbol_sprite.svg#icon-github"></use>
+                </svg></a></li>
+            <li class="social__item"> <a class="social__link" href="#">
+                <svg class="social__img" width="31px" height="18px">
+                  <use xlink:href="./assets/images/svg/symbol_sprite.svg#icon-in"></use>
+                </svg></a></li>
           </ul>
         </div>
       </div>

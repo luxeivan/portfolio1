@@ -1,27 +1,23 @@
 header.header
     .header__top
         ul.social
+            each item in ['vk','github','in']
+                - item='./assets/images/svg/symbol_sprite.svg#icon-' + item
                 li.social__item 
                     a.social__link(href="#")
                         svg(width="31px" height="18px").social__img
-                            use(xlink:href='./assets/images/svg/symbol_sprite.svg#icon-vk')
-                li.social__item 
-                    a.social__link(href="#")
-                        svg(width="31px" height="18px").social__img
-                            use(xlink:href='./assets/images/svg/symbol_sprite.svg#icon-github')
-                li.social__item 
-                    a.social__link(href="#")
-                        svg(width="31px" height="18px").social__img
-                            use(xlink:href='./assets/images/svg/symbol_sprite.svg#icon-in')
+                            use(xlink:href= item)
         .hamburger
     .header__middle
-        .my
-            .my__img
+        .i
+            .i__img
                 img(src="./assets/images/i.jpg", alt="Это Я!")
-            .my__title Шишкин Иван
-            .my__text Личный сайт веб разработчика
+            .i__title Шишкин Иван
+            .i__text Личный сайт веб разработчика
     .header__arrow
-        .strelka 
+        .strelka             
             a(href="#")
-                img(src="./assets/images/icons/arrow_down.svg", alt="Вниз")
+                svg(width="20" height="20").strelka__img
+                    use(xlink:href='./assets/images/svg/symbol_sprite.svg#icon-arrow_down')
+                //- img(src="./assets/images/icons/arrow_down.svg", alt="Вниз")
     //- .header__bottom
