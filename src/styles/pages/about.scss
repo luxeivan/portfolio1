@@ -9,16 +9,16 @@
     }
     &__left{
         width: 50%;
-        height: 100vh;
         display: flex;
+        padding: 0 20px;
         background: #efeee9;
     }
     &__column{
         flex: 1;
 
     }
-    &__about{
-        
+    &__text{
+        margin-bottom: 40px;
     }
     &__img{
         width: 100%;
@@ -31,16 +31,17 @@
     &__right{
         width: 50%;
         background: #eeebdf;
+        padding: 0 40px;
         &-title{
-            font-family: "BERNIER",Arial, Helvetica, sans-serif;
-            text-align: center;
+            margin-bottom:40px;
         }
         &-text{
-            margin-bottom: 30px;
+            margin-bottom: 60px;
         }
     }
 }
 .tehnology{
+    margin-bottom: 40px;
     &__item{
         margin-bottom: 20px;
     }
@@ -48,18 +49,37 @@
         font-weight: bold;
     }
 }
-.teh{
+.teh{    
     display: flex;
+    align-items: center;
     &__item{
+        position: relative;
+        min-width: 120px;
+        width: 120px;
         margin: 0 10px;
+    }
+    &__text{
+        text-align: center;
+        color: #1bb696;
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        font-family: "RobotoMedium",Arial, Helvetica, sans-serif;
+        font-size: 14px;
     }
 }
 .zagolovok--kto h2{
     font-size: 35px;
+    margin-top: 40px;
+    margin-bottom:40px;
+
 }
 .zagolovok--right h2{
     font-size: 35px;
     width: 220px;
+    
 }
 .traingle{
     position: absolute;
@@ -71,3 +91,145 @@
         fill: #eeebdf;
     }
 }
+.map-area{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: #ccc;
+}
+.map{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.contacts{
+    width: 380px;
+    height: 290px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 5px;
+    padding: 40px;
+    transform: translate(-50%,-50%);
+    background: rgba($color: #fcfcfc, $alpha: .85);
+    &__title{
+        margin-bottom: 40px;
+    }
+    &__row{
+        display: flex;
+        align-items: center;
+        margin: 0 20px;
+    }
+    &__img{
+        margin: 10px;
+    }
+    &__svg{
+        width: 30px;
+        height: 30px;
+        fill: #00bea4;
+    }
+    &__text{
+        color: #455a64;
+        font-family: "RobotoMedium",Arial, Helvetica, sans-serif;
+    }
+}
+.zagolovok--contacts h2{
+    font-size: 35px;
+}
+
+// __________________________________________________________________
+.circles {
+    fill: none;
+    stroke-width: 15;
+  }
+  .circle__first {
+    stroke: #dfdcd5;
+  }
+  .circle__second {
+    stroke: #1bb696;
+    stroke-dasharray: .0010 282.6;
+    transition: all 1s;
+  }
+  
+  .item {
+    position: relative;
+    display: inline-block;
+    border: 1px solid #ccc;
+    width: 250px;
+    height: 250px;
+  }
+  
+  .item__title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #1bb696;
+    font-weight: bold;
+  }
+  .circles:hover .circle-0 {
+     stroke-dasharray: .001 282.6;
+  }
+  .circles:hover .circle-5 {
+    stroke-dasharray: 14.13 282.6;
+  }
+  .circles:hover .circle-10 {
+     stroke-dasharray: 28.26 282.6;
+  }
+  .circles:hover .circle-15 {
+     stroke-dasharray: 42.39 282.6;
+  }
+  .circles:hover .circle-20 {
+     stroke-dasharray: 56.52 282.6;
+  }
+  .circles:hover .circle-25 {
+     stroke-dasharray: 70.65 282.6;
+  }
+  .circles:hover .circle-30 {
+     stroke-dasharray: 84.78 282.6;
+  }
+  .circles:hover .circle-35 {
+     stroke-dasharray: 98.91 282.6;
+  }
+  .circles .circle-40 {
+     stroke-dasharray: 113.04 282.6;
+  }
+  .circles .circle-45 {
+     stroke-dasharray: 127.17 282.6;
+  }
+  .circles.circle-50 {
+     stroke-dasharray: 141.3 282.6;
+  }
+  .circles .circle-55 {
+     stroke-dasharray: 155.43 282.6;
+  }
+  .circles .circle-60 {
+     stroke-dasharray: 169.56 282.6;
+  }
+  .circles .circle-65 {
+     stroke-dasharray: 183.69 282.6;
+  }
+  .circles .circle-70 {
+     stroke-dasharray: 197.82 282.6;
+  }
+  .circles .circle-75 {
+     stroke-dasharray: 211.95 282.6;
+  }
+  .circles .circle-80 {
+     stroke-dasharray: 226.08 282.6;
+  }
+  .circles .circle-85 {
+     stroke-dasharray: 240.21 282.6;
+  }
+  .circles .circle-90 {
+     stroke-dasharray: 254.34 282.6;
+  }
+  .circles:hover .circle-95 {
+     stroke-dasharray: 268.47 282.6;
+  }
+  .circles:hover .circle-100 {
+     stroke-dasharray: 282.6 282.6;
+  }

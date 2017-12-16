@@ -1,11 +1,13 @@
-header.header
+header.header    
+    svg.header__img-opacity
+            use(xlink:href=`./assets/images/svg/symbol_sprite.svg#icon-${headertitle}`)
     .header__top
         ul.social
             each item in ['vk','github','in']
                 - item='./assets/images/svg/symbol_sprite.svg#icon-' + item
                 li.social__item 
                     a.social__link(href="#")
-                        svg(width="31px" height="18px").social__img
+                        svg(width="31px" height="18px" viewbox="0 0 31 20").social__img
                             use(xlink:href= item)
         .hamburger
     .header__middle

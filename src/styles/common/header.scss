@@ -21,16 +21,28 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        z-index: 10;
     }
     &__arrow {
         flex: 0.2;
+    }
+    &__img-opacity{
+        width: 80%;
+        height: 50%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        opacity: .06;
+        fill: #fff;
+        
     }
 }
 .social{
     display: flex;
     &__item{
-        width: 36px;
-        height: 36px;
+        width: 33px;
+        height: 24px;
         margin: 0 10px;
         display: flex;
         justify-content: center;
@@ -38,9 +50,17 @@
     }
     &__link{
         cursor: pointer;
+        display: flex;
+        align-items: center;
     }
     &__img{
+        display: flex;
+        align-items: center;
         fill: #fff;
+        opacity: .5;
+        &:hover{
+            opacity: 1;
+        }
     }
 }
 .i {
