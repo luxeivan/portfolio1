@@ -23,15 +23,7 @@
         justify-content: center;
     }
     &__arrow {
-        flex: 0.5;
-    }
-    &__bottom{
-        width: 120%;
-        height: 26%;
-        position: absolute;
-        background: url('../images/icons/bg.svg') center center no-repeat;
-        background-size: cover;
-        bottom:0;
+        flex: 0.2;
     }
 }
 .social{
