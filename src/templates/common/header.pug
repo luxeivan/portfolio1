@@ -7,19 +7,17 @@ header.header
                 - item='./assets/images/svg/symbol_sprite.svg#icon-' + item
                 li.social__item 
                     a.social__link(href="#")
-                        svg(width="31px" height="18px" viewbox="0 0 31 20").social__img
+                        svg(width="31px" height="18px" viewbox="0 0 31 18" preserveAspectRatio="xMidYMid meet").social__img
                             use(xlink:href= item)
         .hamburger
     .header__middle
         .i
             .i__img
                 img(src="./assets/images/i.jpg", alt="Это Я!")
-            .i__title Шишкин Иван
-            .i__text Личный сайт веб разработчика
+            .i__title #{title1}
+            .i__text #{title2}
     .header__arrow
         .strelka             
             a(href="#")
                 svg(width="20" height="20").strelka__img
                     use(xlink:href='./assets/images/svg/symbol_sprite.svg#icon-arrow_down')
-                //- img(src="./assets/images/icons/arrow_down.svg", alt="Вниз")
-    //- .header__bottom

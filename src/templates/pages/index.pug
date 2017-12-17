@@ -2,12 +2,35 @@ extends ../template
 
 block variables
     - var title = 'Добро пожаловать'
+        - var headertitle = 'portfolio_header'
+    - var title1 = 'Шишкин Иван'
+    - var title2 = 'Личный сайт веб разработчика'
 
 block content
-    h1 Главная
-    form
-        label(for="email") email
-        input(name="email" id="email")
-        label(for="password") password
-        input(name="password" id="password")
-        button Войти
+    .main
+        .main__autorization
+            a(href="#").autorization Авторизироваться
+        .main__about
+            .i.i--main
+                .i__img
+                    img(src="./assets/images/i.jpg", alt="Это Я!")
+                .i__title #{title1}
+                .i__text #{title2}
+            ul.social.social--main
+                each item in ['vk','github','in']
+                    - item='./assets/images/svg/symbol_sprite.svg#icon-' + item
+                    li.social__item 
+                        a.social__link(href="#")
+                            svg(width="31px" height="18px" viewbox="0 0 31 18" preserveAspectRatio="xMidYMid meet").social__img
+                                use(xlink:href= item)
+            ul.main-menu
+                each val, index in {'Мои работы':'#', 'Обо мне':'#', 'Блог':'#'}
+                    li.main-menu__item
+                        a(href= val).main-menu__link= index
+    //- h1 Главная
+    //- form
+    //-     label(for="email") email
+    //-     input(name="email" id="email")
+    //-     label(for="password") password
+    //-     input(name="password" id="password")
+    //-     button Войти

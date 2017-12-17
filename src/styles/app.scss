@@ -1,6 +1,7 @@
 body{
     margin: 0;
     font-family: "RobotoRegular",Arial, Helvetica, sans-serif;
+    color: #373e42;
 }
 ul{
     margin: 0;
@@ -21,4 +22,7 @@ a{
 @import 'common/slider';
 @import 'common/header';
 @import 'common/footer';
+@import 'pages/index';
 @import 'pages/about';
+@import 'pages/blog';
+@import 'pages/myworks';

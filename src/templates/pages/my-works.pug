@@ -2,7 +2,51 @@ extends ../template
 
 block variables
     - var title = 'Мои работы'
+    - var headertitle = 'portfolio_header'
+    - var title1 = 'Шишкин Иван'
+    - var title2 = 'Личный сайт веб разработчика'
 
 block content
-    h1 Мои работы
-    include ../common/slider.pug
+    .myworks
+        .myworks__area-title
+            .myworks__traingle
+                    svg(xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 85" preserveaspectratio="none").traingle
+                        polygon(points="0,0 0,86 500.8,86 500.8,75.5").traingle__left.traingle--myworks
+                        polygon(points="1000,0 1000,86 500,86 500,75.5").traingle__right.traingle--myworks
+            .zagolovok
+                svg(width="100%").zagolovok__bg
+                    use(xlink:href='./assets/images/svg/symbol_sprite.svg#icon-works_header')
+                h1 Мои работы
+        include ../common/slider.pug
+    .myworks-about
+        .myworks-about__title
+            .zagolovok.zagolovok--myworks-about
+                svg(width="100%").zagolovok__bg
+                    use(xlink:href='./assets/images/svg/symbol_sprite.svg#icon-about_header')
+                h2 что обо мне говорят
+        .myworks-about__area
+            .myworks-about__otzivi
+                ul.otzivi
+                    - var values = [{'text':'Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!','foto':'./assets/images/myworks/koval.png','name':'Дмитрий Ковальчук','doljnost':'основатель Loftschool'},{'text':'Этот код выдержит любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!','foto':'./assets/images/myworks/saban.png','name':'Владимир Сабанцев','doljnost':'Преподаватель'}];
+                    for val in values
+                        li.otzivi__item                        
+                            .otzivi__text= val.text
+                            .otzivi__autor
+                                .autor__foto
+                                    img(src= val.foto)
+                                .autor__text
+                                    .autor__name= val.name
+                                    .autor__doljnost= val.doljnost
+            .myworks-about__feedback
+                .feedback
+                    .zagolovok.zagolovok--feedback
+                        h2 связаться со мной
+                    form(action="").feedback__form
+                        input(type="text", name="name" placeholder="Имя").feedback__input
+                        input(type="text", name="email" placeholder="Email").feedback__input
+                        textarea(name="message", cols="30", rows="10" placeholder="Ваше сообщение").feedback__input.feedback__textarea
+                        .feedback__buttons
+                            button(type="submit").feedback__button.feedback__submit Отправить
+                            button.feedback__button.feedback__clear Очистить
+
+    
