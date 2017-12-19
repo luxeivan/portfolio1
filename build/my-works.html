@@ -9,63 +9,146 @@
     <meta content="ie=edge" http-equiv="x-ua-compatible">
     <link rel="stylesheet" href="../node_modules/normalize.css/normalize.css">
     <link rel="stylesheet" href="./assets/styles/app.min.css">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBGs1obM6H-3OzT_tN_5iXJysq-oGnbqwg"></script>
     <script src="./assets/scripts/bundle.js" defer></script>
   </head>
   <body>
-    <header class="header">
+    <header class="header">   
+      <svg class="header__img-opacity">
+        <use xlink:href="./assets/images/svg/symbol_sprite.svg#icon-portfolio_header"></use>
+      </svg>
       <div class="header__top">
         <ul class="social">
           <li class="social__item"> <a class="social__link" href="#">
-              <svg class="social__img" width="31px" height="18px">
+              <svg class="social__img" width="31px" height="18px" viewbox="0 0 31 18" preserveAspectRatio="xMidYMid meet">
                 <use xlink:href="./assets/images/svg/symbol_sprite.svg#icon-vk"></use>
               </svg></a></li>
           <li class="social__item"> <a class="social__link" href="#">
-              <svg class="social__img" width="31px" height="18px">
+              <svg class="social__img" width="31px" height="18px" viewbox="0 0 31 18" preserveAspectRatio="xMidYMid meet">
                 <use xlink:href="./assets/images/svg/symbol_sprite.svg#icon-github"></use>
               </svg></a></li>
           <li class="social__item"> <a class="social__link" href="#">
-              <svg class="social__img" width="31px" height="18px">
+              <svg class="social__img" width="31px" height="18px" viewbox="0 0 31 18" preserveAspectRatio="xMidYMid meet">
                 <use xlink:href="./assets/images/svg/symbol_sprite.svg#icon-in"></use>
               </svg></a></li>
         </ul>
         <div class="hamburger"></div>
       </div>
       <div class="header__middle">
-        <div class="my">
-          <div class="my__img"><img src="./assets/images/i.jpg" alt="Это Я!"></div>
-          <div class="my__title">Шишкин Иван</div>
-          <div class="my__text">Личный сайт веб разработчика</div>
+        <div class="i">
+          <div class="i__img"><img src="./assets/images/i.jpg" alt="Это Я!"></div>
+          <div class="i__title">Шишкин Иван</div>
+          <div class="i__text">Личный сайт веб разработчика</div>
         </div>
       </div>
       <div class="header__arrow">
-        <div class="strelka"> <a href="#"><img src="./assets/images/icons/arrow_down.svg" alt="Вниз"></a></div>
+        <div class="strelka">            <a href="#">
+            <svg class="strelka__img" width="20" height="20">
+              <use xlink:href="./assets/images/svg/symbol_sprite.svg#icon-arrow_down"></use>
+            </svg></a></div>
       </div>
     </header>
-    <h1>Мои работы</h1>
-    <div class="container">
-      <ul id="slides">
-        <li class="slide showing"></li>
-        <li class="slide"></li>
-        <li class="slide"></li>
-      </ul>
-      <div class="buttons">
-        <button class="controls" id="previous">&lt;</button>
-        <button class="controls" id="next">&gt;</button>
+    <div class="myworks">
+      <div class="myworks__area-title">
+        <div class="myworks__traingle">
+          <svg class="traingle" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 85" preserveaspectratio="none">
+            <polygon class="traingle__left traingle--myworks" points="0,0 0,86 500.8,86 500.8,75.5"></polygon>
+            <polygon class="traingle__right traingle--myworks" points="1000,0 1000,86 500,86 500,75.5"></polygon>
+          </svg>
+        </div>
+        <div class="zagolovok">
+          <svg class="zagolovok__bg" width="100%">
+            <use xlink:href="./assets/images/svg/symbol_sprite.svg#icon-works_header"></use>
+          </svg>
+          <h1>Мои работы</h1>
+        </div>
+      </div>
+      <div class="container">
+        <ul id="slides">
+          <li class="slide showing"></li>
+          <li class="slide"></li>
+          <li class="slide"></li>
+        </ul>
+        <div class="buttons">
+          <button class="controls" id="previous">&lt;</button>
+          <button class="controls" id="next">&gt;</button>
+        </div>
+      </div>
+    </div>
+    <div class="myworks-about">
+      <div class="myworks-about__title">
+        <div class="zagolovok zagolovok--myworks-about">
+          <svg class="zagolovok__bg" width="100%">
+            <use xlink:href="./assets/images/svg/symbol_sprite.svg#icon-about_header"></use>
+          </svg>
+          <h2>что обо мне говорят</h2>
+        </div>
+      </div>
+      <div class="myworks-about__area">
+        <div class="myworks-about__otzivi">
+          <ul class="otzivi">
+            <li class="otzivi__item">                       
+              <div class="otzivi__text">Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!</div>
+              <div class="otzivi__autor">
+                <div class="autor__foto"><img src="./assets/images/myworks/koval.png"></div>
+                <div class="autor__text">
+                  <div class="autor__name">Дмитрий Ковальчук</div>
+                  <div class="autor__doljnost">основатель Loftschool</div>
+                </div>
+              </div>
+            </li>
+            <li class="otzivi__item">                       
+              <div class="otzivi__text">Этот код выдержит любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!</div>
+              <div class="otzivi__autor">
+                <div class="autor__foto"><img src="./assets/images/myworks/saban.png"></div>
+                <div class="autor__text">
+                  <div class="autor__name">Владимир Сабанцев</div>
+                  <div class="autor__doljnost">Преподаватель</div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="myworks-about__feedback">
+          <div class="feedback">
+            <div class="zagolovok zagolovok--feedback">
+              <h2>связаться со мной</h2>
+            </div>
+            <form class="feedback__form" action="">
+              <input class="feedback__input" type="text" name="name" placeholder="Имя">
+              <input class="feedback__input" type="text" name="email" placeholder="Email">
+              <textarea class="feedback__input feedback__textarea" name="message" cols="30" rows="10" placeholder="Ваше сообщение"></textarea>
+              <div class="feedback__buttons">
+                <button class="feedback__button feedback__submit" type="submit">Отправить</button>
+                <button class="feedback__button feedback__clear">Очистить</button>
+              </div>
+            </form>
+          </div>
+        </div>
       </div>
     </div>
     <footer class="footer">
       <div class="footer__row">
         <ul class="footer__menu">
-          <li class="footer__menu-item">Мои работы</li>
-          <li class="footer__menu-item">Обо мне</li>
-          <li class="footer__menu-item">Блог</li>
-          <li class="footer__menu-item">Авторизация</li>
+          <li class="footer__menu-item"><a href="#">Мои работы</a></li>
+          <li class="footer__menu-item"><a href="#">Обо мне</a></li>
+          <li class="footer__menu-item"><a href="#">Блог</a></li>
+          <li class="footer__menu-item"><a href="#">Авторизация</a></li>
         </ul>
         <div class="footer__social">
-          <ul class="social">
-            <li class="social__item"> <a class="social__link" href="#">Фэйсбук</a></li>
-            <li class="social__item"> <a class="social__link" href="#">Твиттер</a></li>
-            <li class="social__item"><a class="social__link" href="#"> Инстаграм</a></li>
+          <ul class="social social--footer">
+            <li class="social__item"> <a class="social__link" href="#">
+                <svg class="social__img" width="31px" height="18px" viewbox="0 0 31 18" preserveAspectRatio="xMidYMid meet">
+                  <use xlink:href="./assets/images/svg/symbol_sprite.svg#icon-vk"></use>
+                </svg></a></li>
+            <li class="social__item"> <a class="social__link" href="#">
+                <svg class="social__img" width="31px" height="18px" viewbox="0 0 31 18" preserveAspectRatio="xMidYMid meet">
+                  <use xlink:href="./assets/images/svg/symbol_sprite.svg#icon-github"></use>
+                </svg></a></li>
+            <li class="social__item"> <a class="social__link" href="#">
+                <svg class="social__img" width="31px" height="18px" viewbox="0 0 31 18" preserveAspectRatio="xMidYMid meet">
+                  <use xlink:href="./assets/images/svg/symbol_sprite.svg#icon-in"></use>
+                </svg></a></li>
           </ul>
         </div>
       </div>

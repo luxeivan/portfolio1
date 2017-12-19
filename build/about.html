@@ -9,97 +9,222 @@
     <meta content="ie=edge" http-equiv="x-ua-compatible">
     <link rel="stylesheet" href="../node_modules/normalize.css/normalize.css">
     <link rel="stylesheet" href="./assets/styles/app.min.css">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBGs1obM6H-3OzT_tN_5iXJysq-oGnbqwg"></script>
     <script src="./assets/scripts/bundle.js" defer></script>
   </head>
   <body>
-    <header class="header">
+    <header class="header">   
+      <svg class="header__img-opacity">
+        <use xlink:href="./assets/images/svg/symbol_sprite.svg#icon-portfolio_header"></use>
+      </svg>
       <div class="header__top">
         <ul class="social">
           <li class="social__item"> <a class="social__link" href="#">
-              <svg class="social__img" width="31px" height="18px">
+              <svg class="social__img" width="31px" height="18px" viewbox="0 0 31 18" preserveAspectRatio="xMidYMid meet">
                 <use xlink:href="./assets/images/svg/symbol_sprite.svg#icon-vk"></use>
               </svg></a></li>
           <li class="social__item"> <a class="social__link" href="#">
-              <svg class="social__img" width="31px" height="18px">
+              <svg class="social__img" width="31px" height="18px" viewbox="0 0 31 18" preserveAspectRatio="xMidYMid meet">
                 <use xlink:href="./assets/images/svg/symbol_sprite.svg#icon-github"></use>
               </svg></a></li>
           <li class="social__item"> <a class="social__link" href="#">
-              <svg class="social__img" width="31px" height="18px">
+              <svg class="social__img" width="31px" height="18px" viewbox="0 0 31 18" preserveAspectRatio="xMidYMid meet">
                 <use xlink:href="./assets/images/svg/symbol_sprite.svg#icon-in"></use>
               </svg></a></li>
         </ul>
         <div class="hamburger"></div>
       </div>
       <div class="header__middle">
-        <div class="my">
-          <div class="my__img"><img src="./assets/images/i.jpg" alt="Это Я!"></div>
-          <div class="my__title">Шишкин Иван</div>
-          <div class="my__text">Личный сайт веб разработчика</div>
+        <div class="i">
+          <div class="i__img"><img src="./assets/images/i.jpg" alt="Это Я!"></div>
+          <div class="i__title">Шишкин Иван</div>
+          <div class="i__text">Личный сайт веб разработчика</div>
         </div>
       </div>
       <div class="header__arrow">
-        <div class="strelka"> <a href="#"><img src="./assets/images/icons/arrow_down.svg" alt="Вниз"></a></div>
+        <div class="strelka">            <a href="#">
+            <svg class="strelka__img" width="20" height="20">
+              <use xlink:href="./assets/images/svg/symbol_sprite.svg#icon-arrow_down"></use>
+            </svg></a></div>
       </div>
     </header>
     <div class="about">
+      <div class="about__traingle">
+        <svg class="traingle" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 85" preserveaspectratio="none">
+          <polygon class="traingle__left" points="0,0 0,86 500.8,86 500.8,75.5"></polygon>
+          <polygon class="traingle__right" points="1000,0 1000,86 500,86 500,75.5"></polygon>
+        </svg>
+      </div>
       <div class="about__left">
         <div class="about__left-ugol"></div>
         <div class="about__column">
-          <h1 class="about__about">Обо мне</h1>
+          <div class="zagolovok">
+            <svg class="zagolovok__bg" width="100%">
+              <use xlink:href="./assets/images/svg/symbol_sprite.svg#icon-about_header"></use>
+            </svg>
+            <h1>Обо мне</h1>
+          </div>
         </div>
         <div class="about__column"><img class="about__img" src="./assets/images/about/me.jpg" alt="Это Я!">
-          <h2 class="about__title">Кто Я</h2>
-          <div class="about__text">Я веб разработчик из Москвы. Мне 32 года. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты. Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!</div>
+          <div class="zagolovok zagolovok--kto">
+            <h2>Кто Я</h2>
+          </div>
+          <div class="about__text"> 
+            <p>Я веб разработчик из Москвы. Мне 32 года. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.</p>
+            <p>Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!</p>
+          </div>
         </div>
       </div>
       <div class="about__right">
-        <svg class="about__right-ugol">
-          <use xlink:href="./assets/images/svg/symbol_sprite.svg#icon-about_bg_right"></use>
-        </svg>
-        <h2 class="about__right-title">Чем я могу быть вам полезен</h2>
+        <div class="about__right-title">
+          <div class="zagolovok zagolovok--right">
+            <h2>Чем я могу быть вам полезен</h2>
+          </div>
+        </div>
         <div class="about__right-text">Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.</div>
         <ul class="tehnology">
           <li class="tehnology__item"> 
             <h3 class="tehnology__title">Frontend</h3>
             <ul class="teh">
-              <li class="teh__item">html</li>
-              <li class="teh__item">css3</li>
-              <li class="teh__item">javascript & jQuery</li>
+              <li class="teh__item"> 
+                <svg class="circles" viewbox="0 0 110 110">
+                  <circle class="circle__first" r="45" cx="50%" cy="50%" fill="none"></circle>
+                  <circle class="circle__second circle-90" r="45" cx="50%" cy="50%" transform="rotate(-90 55 55)"></circle>
+                </svg><span class="teh__text">HTML</span>
+              </li>
+              <li class="teh__item"> 
+                <svg class="circles" viewbox="0 0 110 110">
+                  <circle class="circle__first" r="45" cx="50%" cy="50%" fill="none"></circle>
+                  <circle class="circle__second circle-85" r="45" cx="50%" cy="50%" transform="rotate(-90 55 55)"></circle>
+                </svg><span class="teh__text">CSS3</span>
+              </li>
+              <li class="teh__item"> 
+                <svg class="circles" viewbox="0 0 110 110">
+                  <circle class="circle__first" r="45" cx="50%" cy="50%" fill="none"></circle>
+                  <circle class="circle__second circle-85" r="45" cx="50%" cy="50%" transform="rotate(-90 55 55)"></circle>
+                </svg><span class="teh__text">Javascript &amp; jQuery</span>
+              </li>
             </ul>
           </li>
           <li class="tehnology__item">
             <h3 class="tehnology__title">Backend</h3>
             <ul class="teh">
-              <li class="teh__item">PHP</li>
-              <li class="teh__item">mySQL</li>
-              <li class="teh__item">Node.js & npm</li>
-              <li class="teh__item">MongoDB</li>
+              <li class="teh__item"> 
+                <svg class="circles" viewbox="0 0 110 110">
+                  <circle class="circle__first" r="45" cx="50%" cy="50%" fill="none"></circle>
+                  <circle class="circle__second circle-45" r="45" cx="50%" cy="50%" transform="rotate(-90 55 55)"></circle>
+                </svg><span class="teh__text">PHP</span>
+              </li>
+              <li class="teh__item"> 
+                <svg class="circles" viewbox="0 0 110 110">
+                  <circle class="circle__first" r="45" cx="50%" cy="50%" fill="none"></circle>
+                  <circle class="circle__second circle-55" r="45" cx="50%" cy="50%" transform="rotate(-90 55 55)"></circle>
+                </svg><span class="teh__text">mySQL</span>
+              </li>
+              <li class="teh__item"> 
+                <svg class="circles" viewbox="0 0 110 110">
+                  <circle class="circle__first" r="45" cx="50%" cy="50%" fill="none"></circle>
+                  <circle class="circle__second circle-40" r="45" cx="50%" cy="50%" transform="rotate(-90 55 55)"></circle>
+                </svg><span class="teh__text">Node.js &amp; npm</span>
+              </li>
+              <li class="teh__item"> 
+                <svg class="circles" viewbox="0 0 110 110">
+                  <circle class="circle__first" r="45" cx="50%" cy="50%" fill="none"></circle>
+                  <circle class="circle__second circle-60" r="45" cx="50%" cy="50%" transform="rotate(-90 55 55)"></circle>
+                </svg><span class="teh__text">MongoDB</span>
+              </li>
             </ul>
           </li>
           <li class="tehnology__item">
             <h3 class="tehnology__title">WorkFlow</h3>
             <ul class="teh">
-              <li class="teh__item">Git</li>
-              <li class="teh__item">Gulp</li>
-              <li class="teh__item">Bower</li>
+              <li class="teh__item"> 
+                <svg class="circles" viewbox="0 0 110 110">
+                  <circle class="circle__first" r="45" cx="50%" cy="50%" fill="none"></circle>
+                  <circle class="circle__second circle-90" r="45" cx="50%" cy="50%" transform="rotate(-90 55 55)"></circle>
+                </svg><span class="teh__text">Git</span>
+              </li>
+              <li class="teh__item"> 
+                <svg class="circles" viewbox="0 0 110 110">
+                  <circle class="circle__first" r="45" cx="50%" cy="50%" fill="none"></circle>
+                  <circle class="circle__second circle-70" r="45" cx="50%" cy="50%" transform="rotate(-90 55 55)"></circle>
+                </svg><span class="teh__text">Gulp</span>
+              </li>
+              <li class="teh__item"> 
+                <svg class="circles" viewbox="0 0 110 110">
+                  <circle class="circle__first" r="45" cx="50%" cy="50%" fill="none"></circle>
+                  <circle class="circle__second circle-65" r="45" cx="50%" cy="50%" transform="rotate(-90 55 55)"></circle>
+                </svg><span class="teh__text">Bower</span>
+              </li>
             </ul>
           </li>
         </ul>
       </div>
     </div>
+    <div class="map-area">
+      <div class="map" id="map">       </div>
+      <div class="contacts">
+        <div class="contacts__title">
+          <div class="zagolovok zagolovok--contacts">
+            <h2>Контакты</h2>
+          </div>
+        </div>
+        <div class="contacts__row">
+          <div class="contacts__img"> 
+            <svg class="contacts__svg">
+              <use xlink:href="./assets/images/svg/symbol_sprite.svg#icon-skype">                   </use>
+            </svg>
+          </div>
+          <div class="contacts__text">ivanes30001</div>
+        </div>
+        <div class="contacts__row">
+          <div class="contacts__img"> 
+            <svg class="contacts__svg">
+              <use xlink:href="./assets/images/svg/symbol_sprite.svg#icon-envelope">                   </use>
+            </svg>
+          </div>
+          <div class="contacts__text">luxeivan@gmail.com</div>
+        </div>
+        <div class="contacts__row">
+          <div class="contacts__img"> 
+            <svg class="contacts__svg">
+              <use xlink:href="./assets/images/svg/symbol_sprite.svg#icon-phone">                   </use>
+            </svg>
+          </div>
+          <div class="contacts__text">+7 901 794 59 57</div>
+        </div>
+        <div class="contacts__row">
+          <div class="contacts__img"> 
+            <svg class="contacts__svg">
+              <use xlink:href="./assets/images/svg/symbol_sprite.svg#icon-map_marker">                   </use>
+            </svg>
+          </div>
+          <div class="contacts__text">г. Москва, ул. Поречная, д.21</div>
+        </div>
+      </div>
+    </div>
     <footer class="footer">
       <div class="footer__row">
         <ul class="footer__menu">
-          <li class="footer__menu-item">Мои работы</li>
-          <li class="footer__menu-item">Обо мне</li>
-          <li class="footer__menu-item">Блог</li>
-          <li class="footer__menu-item">Авторизация</li>
+          <li class="footer__menu-item"><a href="#">Мои работы</a></li>
+          <li class="footer__menu-item"><a href="#">Обо мне</a></li>
+          <li class="footer__menu-item"><a href="#">Блог</a></li>
+          <li class="footer__menu-item"><a href="#">Авторизация</a></li>
         </ul>
         <div class="footer__social">
-          <ul class="social">
-            <li class="social__item"> <a class="social__link" href="#">Фэйсбук</a></li>
-            <li class="social__item"> <a class="social__link" href="#">Твиттер</a></li>
-            <li class="social__item"><a class="social__link" href="#"> Инстаграм</a></li>
+          <ul class="social social--footer">
+            <li class="social__item"> <a class="social__link" href="#">
+                <svg class="social__img" width="31px" height="18px" viewbox="0 0 31 18" preserveAspectRatio="xMidYMid meet">
+                  <use xlink:href="./assets/images/svg/symbol_sprite.svg#icon-vk"></use>
+                </svg></a></li>
+            <li class="social__item"> <a class="social__link" href="#">
+                <svg class="social__img" width="31px" height="18px" viewbox="0 0 31 18" preserveAspectRatio="xMidYMid meet">
+                  <use xlink:href="./assets/images/svg/symbol_sprite.svg#icon-github"></use>
+                </svg></a></li>
+            <li class="social__item"> <a class="social__link" href="#">
+                <svg class="social__img" width="31px" height="18px" viewbox="0 0 31 18" preserveAspectRatio="xMidYMid meet">
+                  <use xlink:href="./assets/images/svg/symbol_sprite.svg#icon-in"></use>
+                </svg></a></li>
           </ul>
         </div>
       </div>

@@ -21,32 +21,49 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        z-index: 10;
     }
     &__arrow {
-        flex: 0.5;
+        flex: 0.2;
     }
-    &__bottom{
-        width: 120%;
-        height: 26%;
+    &__img-opacity{
+        width: 80%;
+        height: 50%;
         position: absolute;
-        background: url('../images/icons/bg.svg') center center no-repeat;
-        background-size: cover;
-        bottom:0;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        opacity: .06;
+        fill: #fff;
+        
     }
 }
 .social{
     display: flex;
     &__item{
+        width: 33px;
+        height: 24px;
         margin: 0 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     &__link{
         cursor: pointer;
+        display: flex;
+        align-items: center;
     }
     &__img{
+        display: flex;
+        align-items: center;
         fill: #fff;
+        opacity: .5;
+        &:hover{
+            opacity: 1;
+        }
     }
 }
-.my {
+.i {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -95,4 +112,7 @@
         border-radius: 3px;
         background: #fff;
     }
+}
+.strelka__img{
+    fill: #fff;
 }

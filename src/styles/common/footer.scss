@@ -6,6 +6,7 @@
     justify-content: center;
     align-items: center;
     color: #fff;
+    font-family: "RobotoLight",Arial, Helvetica, sans-serif;
     font-size: 16px;
     &__row{
         width: 95%;
@@ -16,6 +17,7 @@
     }
     &__menu{
         display: flex;
+        font-family: "RobotoMedium",Arial, Helvetica, sans-serif;
         &-item{
             margin: 0 10px;
         }
@@ -25,8 +27,34 @@
     }
     &__about{
         width: 40%;
+        opacity: .5;
+        font-family: "RobotoLight",Arial, Helvetica, sans-serif;
     }
     &__copyright{
-        
+        opacity: .5;
+        font-family: "RobotoLight",Arial, Helvetica, sans-serif;
+    }
+}
+.social--footer .social__img{
+    opacity: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.social--footer .social__item{
+    width: 36px;
+    height: 36px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    opacity: .5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &:hover{
+        opacity: 1;
+        background: #fff;
+    }
+    &:hover .social__img{
+        fill: $gray;
     }
 }

@@ -2,40 +2,88 @@ extends ../template
 
 block variables
     - var title = 'Обо мне'
+    - var headertitle = 'portfolio_header'
+    - var title1 = 'Шишкин Иван'
+    - var title2 = 'Личный сайт веб разработчика'
 
 block content
     .about
+        .about__traingle
+            svg(xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 85" preserveaspectratio="none").traingle
+                polygon(points="0,0 0,86 500.8,86 500.8,75.5").traingle__left
+                polygon(points="1000,0 1000,86 500,86 500,75.5").traingle__right
         .about__left
             .about__left-ugol
             .about__column
-                h1.about__about Обо мне
+                .zagolovok
+                    svg(width="100%").zagolovok__bg
+                        use(xlink:href='./assets/images/svg/symbol_sprite.svg#icon-about_header')
+                    h1 Обо мне
             .about__column
                 img.about__img(src="./assets/images/about/me.jpg", alt="Это Я!")
-                h2.about__title Кто Я
-                .about__text Я веб разработчик из Москвы. Мне 32 года. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты. Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
+                .zagolovok.zagolovok--kto
+                    h2 Кто Я
+                .about__text 
+                    p Я веб разработчик из Москвы. Мне 32 года. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
+                    p Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
         .about__right
-            svg.about__right-ugol
-                use(xlink:href='./assets/images/svg/symbol_sprite.svg#icon-about_bg_right')
-            h2.about__right-title Чем я могу быть вам полезен
+            .about__right-title
+                .zagolovok.zagolovok--right
+                    h2 Чем я могу быть вам полезен
             .about__right-text Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
             ul.tehnology
                 li.tehnology__item 
                     h3.tehnology__title Frontend
                     ul.teh
-                        li.teh__item html
-                        li.teh__item css3
-                        li.teh__item javascript & jQuery
+                        each val, index in {'HTML':'circle-90', 'CSS3':'circle-85', 'Javascript & jQuery':'circle-85'}
+                            li.teh__item 
+                                svg(viewbox="0 0 110 110").circles
+                                    circle(r="45" cx="50%" cy="50%" fill="none").circle__first
+                                    circle(r="45" cx="50%" cy="50%" transform="rotate(-90 55 55)" class=`circle__second ${val}`)
+                                span.teh__text= index
                 li.tehnology__item
                     h3.tehnology__title Backend
                     ul.teh
-                        li.teh__item PHP
-                        li.teh__item mySQL
-                        li.teh__item Node.js & npm
-                        li.teh__item MongoDB
+                        each val, index in {'PHP':'circle-45', 'mySQL':'circle-55', 'Node.js & npm':'circle-40', 'MongoDB':'circle-60'}
+                                li.teh__item 
+                                    svg(viewbox="0 0 110 110").circles
+                                        circle(r="45" cx="50%" cy="50%" fill="none").circle__first
+                                        circle(r="45" cx="50%" cy="50%" transform="rotate(-90 55 55)" class=`circle__second ${val}`)
+                                    span.teh__text= index                        
                 li.tehnology__item
                     h3.tehnology__title WorkFlow
                     ul.teh
-                        li.teh__item Git
-                        li.teh__item Gulp
-                        li.teh__item Bower
-    
+                        each val, index in {'Git':'circle-90', 'Gulp':'circle-70', 'Bower':'circle-65'}
+                                li.teh__item 
+                                    svg(viewbox="0 0 110 110").circles
+                                        circle(r="45" cx="50%" cy="50%" fill="none").circle__first
+                                        circle(r="45" cx="50%" cy="50%" transform="rotate(-90 55 55)" class=`circle__second ${val}`)
+                                    span.teh__text= index   
+    .map-area
+        .map#map        
+        .contacts
+            .contacts__title
+                .zagolovok.zagolovok--contacts
+                    h2 Контакты
+            .contacts__row
+                .contacts__img 
+                    svg.contacts__svg
+                        use(xlink:href='./assets/images/svg/symbol_sprite.svg#icon-skype')                    
+                .contacts__text ivanes30001
+            .contacts__row
+                .contacts__img 
+                    svg.contacts__svg
+                        use(xlink:href='./assets/images/svg/symbol_sprite.svg#icon-envelope')                    
+                .contacts__text luxeivan@gmail.com
+            .contacts__row
+                .contacts__img 
+                    svg.contacts__svg
+                        use(xlink:href='./assets/images/svg/symbol_sprite.svg#icon-phone')                    
+                .contacts__text +7 901 794 59 57
+            .contacts__row
+                .contacts__img 
+                    svg.contacts__svg
+                        use(xlink:href='./assets/images/svg/symbol_sprite.svg#icon-map_marker')                    
+                .contacts__text г. Москва, ул. Поречная, д.21
+
+
