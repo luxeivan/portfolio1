@@ -10,6 +10,7 @@ header.header
                         svg(width="31px" height="18px" viewbox="0 0 31 18" preserveAspectRatio="xMidYMid meet").social__img
                             use(xlink:href= item)
         .hamburger
+            button.hamburger__button
     .header__middle
         .i
             .i__img
@@ -17,7 +18,6 @@ header.header
             .i__title #{title1}
             .i__text #{title2}
     .header__arrow
-        .strelka             
-            a(href="#")
+        button.strelka
                 svg(width="20" height="20").strelka__img
                     use(xlink:href='./assets/images/svg/symbol_sprite.svg#icon-arrow_down')

@@ -15,9 +15,9 @@ block content
         .blog__left-menu
             .left-menu
                 ul.left-menu__list
-                    - var values = [{"active": "active","text": "Самое важное в SASS"},{"active": "","text": "Приёмы в вёрстке, без которых не обходится ни один сайт"},{"active": "","text": "Самый необходимый набор Gulp плагинов"},{"active": "","text": "Почему я выбрал Jade"}];
+                    - var values = [{"active": "left-menu__item--active","text": "Самое важное в SASS"},{"active": "","text": "Приёмы в вёрстке, без которых не обходится ни один сайт"},{"active": "","text": "Самый необходимый набор Gulp плагинов"},{"active": "","text": "Почему я выбрал Jade"}];
                     for val in values
-                        li(class=`left-menu__item--${val.active}`).left-menu__item
+                        li(class= val.active).left-menu__item
                             a(href="#" class=`left-menu__link`)= val.text                        
         .blog__content
             .blog-articles

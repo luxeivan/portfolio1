@@ -85,19 +85,25 @@
     }   
 }
 .hamburger{
+    position: relative;
+    cursor: pointer;
+    z-index: 120;
+&__button{
+    padding: 0;
+    border: 0;
     width: 24px;
     height: 5px;
     border-radius: 3px;
     background: #fff;
     position: relative;
-    margin-left: 10px;
     cursor: pointer;
     z-index: 120;
+}
     
     &::before{
         content: '';
         position: absolute;
-        top:-10px;
+        // top:-10px;
         width: 24px;
         height: 5px;
         border-radius: 3px;
@@ -113,6 +119,10 @@
         background: #fff;
     }
 }
-.strelka__img{
-    fill: #fff;
+.strelka{
+    border: 0;
+    background: transparent;
+    &__img{
+        fill: #fff;
+    }
 }
